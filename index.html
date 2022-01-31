@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="script.js"></script>
+    <title>Clock</title>
+  </head>
+  <body class="main-container">
+    <div class="grid-container">
+      <div class="left-grid">
+        <div class="left-grid-one"></div>
+        <div class="left-grid-two">
+          <div class="select1">
+            <img src="./assets/wake_up.png" />
+            <label class="label1">Set wake up time</label>
+            <select class="dropdown" id="wakeUp">
+              <option value="0">Default</option>
+              <option value="24">12AM-1AM</option>
+              <option value="1">1AM-2AM</option>
+              <option value="2">2AM-3AM</option>
+              <option value="3">3AM-4AM</option>
+              <option value="4">4AM-5AM</option>
+              <option value="5">5AM-6AM</option>
+              <option value="6">6AM-7AM</option>
+              <option value="7">7AM-8AM</option>
+              <option value="8">8AM-9AM</option>
+              <option value="9">9AM-10AM</option>
+              <option value="10">10AM-11AM</option>
+              <option value="11">11AM-12PM</option>
+              <option value="12">12PM-1PM</option>
+              <option value="13">1PM-2PM</option>
+              <option value="14">2PM-3PM</option>
+              <option value="15">3PM-4PM</option>
+              <option value="16">4PM-5PM</option>
+              <option value="17">5PM-6PM</option>
+              <option value="18">6PM-7PM</option>
+              <option value="19">7PM-8PM</option>
+              <option value="20">8PM-9PM</option>
+              <option value="21">9PM-10PM</option>
+              <option value="22">10PM-11PM</option>
+              <option value="23">11PM-12AM</option>
+            </select>
+          </div>
+          <div class="border"></div>
+          <div class="select1">
+            <img src="./assets/lunch_time.png" />
+            <label class="label1 label2">Set lunch time</label>
+            <select class="dropdown" id="lunchTime">
+              <option value="0">Default</option>
+              <option value="24">12AM-1AM</option>
+              <option value="1">1AM-2AM</option>
+              <option value="2">2AM-3AM</option>
+              <option value="3">3AM-4AM</option>
+              <option value="4">4AM-5AM</option>
+              <option value="5">5AM-6AM</option>
+              <option value="6">6AM-7AM</option>
+              <option value="7">7AM-8AM</option>
+              <option value="8">8AM-9AM</option>
+              <option value="9">9AM-10AM</option>
+              <option value="10">10AM-11AM</option>
+              <option value="11">11AM-12PM</option>
+              <option value="12">12PM-1PM</option>
+              <option value="13">1PM-2PM</option>
+              <option value="14">2PM-3PM</option>
+              <option value="15">3PM-4PM</option>
+              <option value="16">4PM-5PM</option>
+              <option value="17">5PM-6PM</option>
+              <option value="18">6PM-7PM</option>
+              <option value="19">7PM-8PM</option>
+              <option value="20">8PM-9PM</option>
+              <option value="21">9PM-10PM</option>
+              <option value="22">10PM-11PM</option>
+              <option value="23">11PM-12AM</option>
+            </select>
+          </div>
+          <div class="border"></div>
+          <div class="select1">
+            <img src="./assets/nap_time.png" />
+            <label class="label1 label3">Set nap time</label>
+            <select class="dropdown" id="napTime">
+              <option value="0">Default</option>
+              <option value="24">12AM-1AM</option>
+              <option value="1">1AM-2AM</option>
+              <option value="2">2AM-3AM</option>
+              <option value="3">3AM-4AM</option>
+              <option value="4">4AM-5AM</option>
+              <option value="5">5AM-6AM</option>
+              <option value="6">6AM-7AM</option>
+              <option value="7">7AM-8AM</option>
+              <option value="8">8AM-9AM</option>
+              <option value="9">9AM-10AM</option>
+              <option value="10">10AM-11AM</option>
+              <option value="11">11AM-12PM</option>
+              <option value="12">12PM-1PM</option>
+              <option value="13">1PM-2PM</option>
+              <option value="14">2PM-3PM</option>
+              <option value="15">3PM-4PM</option>
+              <option value="16">4PM-5PM</option>
+              <option value="17">5PM-6PM</option>
+              <option value="18">6PM-7PM</option>
+              <option value="19">7PM-8PM</option>
+              <option value="20">8PM-9PM</option>
+              <option value="21">9PM-10PM</option>
+              <option value="22">10PM-11PM</option>
+              <option value="23">11PM-12AM</option>
+            </select>
+          </div>
+        </div>
+        <div class="left-grid-three">
+          <p class="party-text" id="partyText" onclick="settime()">Party time!</p>
+        </div>
+        <div id="grid-container1">
+        </div>
+      </div>
+      <div class="right-grid">
+        <div class="right-grid-one">
+          <p  class="time-text">TIME</p>
+          <div class="bg">
+            <span class="digit" id="hr"></span>
+            <p class="hours-text">hours</p>
+          </div>
+          <p class="colon">:</p>
+          <div class="bg">
+            <span class="digit" id="min"></span>
+            <p class="hours-text">mins</p>
+          </div>
+          <p class="colon">:</p>
+          <div class="bg">
+            <span class="digit" id="sec"></span>
+            <p class="hours-text">secs</p>
+          </div>
+          <div class="amBg">
+            <p id="am"></p>
+          </div>
+          <div class="behind-grid-one"></div>
+          <div class="behind-grid-two"></div>
+        </div>
+        <div class="right-grid-two">
+          <div class="display-one" id="greeting"></div>
+          <div class="display-two" id="greeting-image"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
